@@ -6,7 +6,7 @@ import lombok.Data;
 public class Employee
 {
   private Integer empno;
-  private String ename;
+  private String ename; 
   private String desg;
   private Double salary;
   private Integer deptno;
