@@ -17,7 +17,9 @@ import com.aashish.model.Employee;
 @Repository("empDAO")
 public class EmployeeDAOImpl implements IEmployeeDAO {
 	private static final String GET_EMPS_BY_DESGS="SELECT EMPNO,ENAME,JOB,SAL,DEPTNO FROM EMP WHERE JOB IN(?,?,?)ORDER BY JOB";
+	private static final String INSERT_EMPS_QUERY="INSERT INTO EMP(EMPNO,ENAME,JOB,SAL,DEPTNO)VALUES(EMP_SEQ.NEXTVAL,????)";
    
+	
 	@Autowired
 	private DataSource ds;
 	
@@ -61,5 +63,34 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 		}
 		return list;
 	}//end method
+
+	@Override
+	public int insertEmployee(Employee emp) throws Exception {
+		int result=0;
+		try(//get pooled con obj
+				Connection con=ds.getConnection();
+				//create prepared statment
+				PreparedStatement ps=con.prepareStatement(INSERT_EMPS_QUERY);
+				
+				){
+			//set values to query param
+			ps.setString(1,emp.getEname());
+			ps.setString(2,emp.getDesg());
+			ps.setDouble(3,emp.getSalary());
+			ps.setInt(4,emp.getDeptno());
+			//execute the sql query
+			 result=ps.executeUpdate();
+			return result;
+		}
+		catch (SQLException se) {
+			 se.printStackTrace();
+		     throw se;	
+		}
+		catch (Exception e) {
+		 e.printStackTrace();
+		 throw e;
+		}
+
+	}//end method of insert
 
 }//end class

@@ -19,5 +19,12 @@ public class PayrollOperationsCollecter {
 		List<Employee>list=empService.showEmployeeByDesgs(desg1,desg2,desg3);
 		return list;
 	}
+	public String processEmployeeForRegistration(Employee emp)throws Exception{
+		//use service
+		String msg=empService.registerEmployee(emp);
+		
+		return msg;
+		
+	}
 	
 }

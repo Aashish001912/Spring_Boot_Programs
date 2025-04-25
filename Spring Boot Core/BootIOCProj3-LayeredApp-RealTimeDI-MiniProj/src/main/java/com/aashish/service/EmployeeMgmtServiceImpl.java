@@ -33,4 +33,12 @@ public class EmployeeMgmtServiceImpl implements IEmployeeMgmtService {
 	return list;
 	}
 
+	@Override
+	public String registerEmployee(Employee emp) throws Exception {
+		//use DAO
+		int count=empDAO.insertEmployee(emp);
+		return count==0?"Employee is not registered":"Employee is registered";
+		
+	}
+
 }
