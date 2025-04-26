@@ -30,18 +30,21 @@ public class BootIocProj3RealTimeDiMiniProjApplication {
 		System.out.println("Enter the emp deptno:");
 		int deptno=sc.nextInt(); 
 		//create Employee class obj having data
-		Employee emp=new Employee();
-		emp.setEname(name);emp.setDesg(desg);emp.setSalary(salary);
-		emp.setDeptno(deptno);
+		Employee emp1=new Employee();
+		emp1.setEname(name);emp1.setDesg(desg);emp1.setSalary(salary);
+		emp1.setDeptno(deptno);
 		
 		//invoke the b.method
 		try {
-			String msg=controller.processEmployeeForRegistration(emp);
+			String msg=controller.processEmployeeForRegistration(emp1);
 	        System.out.println(msg);	
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		
+		
 		System.out.println("============Getting Employee Details By Desgs==========");
 		//read inputs from enduser
 		System.out.println("Enter Desg1:");
@@ -56,8 +59,8 @@ public class BootIocProj3RealTimeDiMiniProjApplication {
 		try {
 			List<Employee> list=controller.processEmployeeByDesg(desg1, desg2, desg3);
 		    System.out.println("Employees Deatils for the given Desg::");
-			list.forEach(emp1->{
-		    System.out.println(emp1);
+			list.forEach(emp->{
+		    System.out.println(emp);
 		    });
 		}
 		catch (Exception e)

@@ -16,9 +16,10 @@ import com.aashish.model.Employee;
 
 @Repository("empDAO")
 public class EmployeeDAOImpl implements IEmployeeDAO {
+	
 	private static final String GET_EMPS_BY_DESGS="SELECT EMPNO,ENAME,JOB,SAL,DEPTNO FROM EMP WHERE JOB IN(?,?,?)ORDER BY JOB";
 	private static final String INSERT_EMPS_QUERY="INSERT INTO EMP(EMPNO,ENAME,JOB,SAL,DEPTNO)VALUES(EMP_SEQ.NEXTVAL,????)";
-   
+	//private static final String INSERT_EMPS_QUERY="INSERT INTO EMP(EMPNO,ENAME,JOB,SAL,DEPTNO)VALUES(EMP_SEQ.NEXTVAL,:1 :2 :3 :4 )";
 	
 	@Autowired
 	private DataSource ds;
