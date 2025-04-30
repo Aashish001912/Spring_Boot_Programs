@@ -1,10 +1,9 @@
-package com.aashish.model;
+package com.aashish.Model;
 
 import lombok.Data;
 
 @Data
 public class Employee {
-	
 	private Integer empno;
 	private String ename;
     private String desg;

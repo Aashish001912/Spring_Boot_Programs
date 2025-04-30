@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>nit</groupId>
-	<artifactId>BootIOCProj3-LayeredApp-RealTimeDI-MiniProj</artifactId>
+	<artifactId>BootIOCProj4-LayeredApp-RealTimeDI-MiniProj-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BootIOCProj3-LayeredApp-RealTimeDI-MiniProj</name>
+	<name>BootIOCProj4-LayeredApp-RealTimeDI-MiniProj-1</name>
 	<description>Example App on Layer App Mini Proj</description>
 	<url/>
 	<licenses>
