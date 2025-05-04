@@ -3,6 +3,7 @@ package com.aashish.Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.aashish.DAO.IEmployeeDAO;
@@ -11,6 +12,7 @@ import com.aashish.Model.Employee;
 public class IEmployeeMgmtServiceImpl implements IEmployeeMgmtService{
 	
 	@Autowired
+	@Qualifier("empMysqlDAO")
 	private IEmployeeDAO empDAO;
 	
 	@Override
