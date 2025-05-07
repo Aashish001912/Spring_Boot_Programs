@@ -50,9 +50,9 @@ public class MysqlEmployeeDAOImpl implements IEmployeeDAO {
 							//add Employee class obj List Collection
 							list.add(emp);
 						}//end of while
-					}//try 2
+					}//try 2 end 
 					
-				}//try 1
+				}//try 1 end
 				catch (SQLException se) {
 				 	se.printStackTrace();
 				 	throw se;
@@ -61,7 +61,7 @@ public class MysqlEmployeeDAOImpl implements IEmployeeDAO {
 			e.printStackTrace();
 		}
 	return list;
-	}//method
+	}//method  end
 
 
 	@Override
