@@ -14,16 +14,22 @@ import lombok.Data;
 public class Actor {
 	@Column(name="AID")
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.SEQUENCE  
 	private Integer aid;
+	
 	@Column(name="ANAME",length=30)
 	private String aname;
+	
 	@Column(name="ADDRS",length=30)
 	private String addrs;
+	
 	@Column(name="CATEGORY",length=30)
 	private String category;
+	
 	@Column(name="CONTACT_NO")
 	private Long contactNo;
+	
 	@Column(name="FEE")
 	private Double fee;
 	
