@@ -9,7 +9,8 @@ import com.aashish.service.IActorMgmtService;
 
 @Component
 public class CrudRespositoryTestRunner implements CommandLineRunner {
-    @Autowired
+    
+	@Autowired
 	private IActorMgmtService actorService;
 	
     @Override
@@ -17,8 +18,8 @@ public class CrudRespositoryTestRunner implements CommandLineRunner {
 	  try {
 		  //perpare entity object
 		   Actor actor=new Actor();
-		   actor.setAname("Anil");
-		   actor.setCategory("Villan");
+		   actor.setAname("rahul");
+		   actor.setCategory("hero");
 		   actor.setContactNo(987654l);
 		   actor.setAddrs("Hyd");
 		   actor.setFee(9876.0);
