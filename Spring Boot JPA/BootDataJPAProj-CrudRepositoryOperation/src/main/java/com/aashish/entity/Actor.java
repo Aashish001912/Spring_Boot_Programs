@@ -1,22 +1,24 @@
 package com.aashish.entity;
 
 
-import io.micrometer.common.lang.NonNull;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Entity
 @Table(name="Actor")
 @Data
-//@NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class Actor {
@@ -27,22 +29,25 @@ public class Actor {
 	private Integer aid;
 	
 	@Column(name="ANAME",length = 30)
-	private   String  aname;
 	@NonNull
+	private   String  aname;
+	
 	
 	@Column(name="ADDRS",length = 30)
-	private   String  addrs;
 	@NonNull
+	private   String  addrs;
 	
 	@Column(name="CATEGORY",length = 30)
-	private   String category;
 	@NonNull
+	private   String category;
+	
 	
 	@Column(name="CONTACT_NO")
-	private   Long  contactNo;
 	@NonNull
+	private   Long  contactNo;
 	
 	@Column(name="FEE")
+	@NonNull
 	private   Double  fee;
 	
 }
