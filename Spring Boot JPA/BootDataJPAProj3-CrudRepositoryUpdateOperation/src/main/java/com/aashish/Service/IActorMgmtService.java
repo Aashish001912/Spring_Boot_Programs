@@ -9,4 +9,5 @@ public interface IActorMgmtService {
     public String updateActor (Actor actor);
     public String deleteById(int id);
     public String deleteActor(Actor actor);
+    public String deleteActorById(Iterable<Integer>ids);
 }

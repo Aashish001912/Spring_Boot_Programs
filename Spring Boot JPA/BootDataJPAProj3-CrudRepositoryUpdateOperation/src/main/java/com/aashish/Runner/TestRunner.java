@@ -57,9 +57,18 @@ public class TestRunner implements CommandLineRunner {
 			e.printStackTrace();
 		}
 		*/
+		/*
 		try {
-			Actor actor=new Actor("raja","hyd","hero",98765L,3456.0);
+			Actor actor=new Actor(1,"raja","hyd","hero",98765L,3456.0);
 			String msg=actorService.deleteActor(actor);
+			System.out.println(msg);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		*/
+		try {
+			String msg=actorService.deleteActorById(List.of(52,1,153));
 			System.out.println(msg);
 		}
 		catch (Exception e) {

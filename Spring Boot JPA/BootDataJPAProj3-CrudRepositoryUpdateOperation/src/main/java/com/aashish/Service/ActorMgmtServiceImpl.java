@@ -62,6 +62,16 @@ public class ActorMgmtServiceImpl implements IActorMgmtService {
 		}
 		return actor.getAid()+" found and is deleted"  ;
 	}
+
+	@Override
+	public String deleteActorById(Iterable<Integer> ids) {
+	    //load the objects
+		Iterable<Actor>list=actorRepo.findAllById(ids);
+	    long count=StreamSupport.stream(list.spliterator(), true).count();
+	    //delete the object
+	    actorRepo.deleteAllById(ids);
+		return count+" of obj are deleted";
+	}
 	
 
 
