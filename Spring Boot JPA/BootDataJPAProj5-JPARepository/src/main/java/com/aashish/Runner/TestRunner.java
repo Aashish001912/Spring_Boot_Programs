@@ -38,13 +38,35 @@ public class TestRunner implements CommandLineRunner {
 		e.printStackTrace();
 		}
 		*/
-		
+		/*
 		try {
 			String msg=actorService.removeAllActorInBatch();
 			System.out.println(msg);
 		}
 		catch (Exception e) {
 		   e.printStackTrace();
+		}
+		*/
+		/*
+		try {
+			Actor actor=new Actor();
+			actor.setAddrs("hyd");
+			actor.setCategory("villan");
+			//use service
+			List<Actor>list=actorService.showActorByData(actor, true,"contactNo","fee");
+			list.forEach(System.out::println);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		*/
+		
+		try {
+			Actor actor=actorService.showActorById(1);
+			System.out.println(actor);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
